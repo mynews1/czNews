@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0F008322B133E3008581FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0F008222B133E3008581FB /* AVFoundation.framework */; };
+		BF0F008522B139E9008581FB /* erweima.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0F008422B139E9008581FB /* erweima.png */; };
+		BF0F008C22B14242008581FB /* ScanResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0F008B22B14242008581FB /* ScanResultVC.m */; };
+		BF0F008E22B147E0008581FB /* erweimakuang-2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0F008D22B147E0008581FB /* erweimakuang-2.png */; };
+		BF0F009022B147FD008581FB /* hengxian2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0F008F22B147FC008581FB /* hengxian2.png */; };
+		BF0F009222B14F75008581FB /* saoyisao.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0F009122B14F75008581FB /* saoyisao.png */; };
 		BF5C493E22B087360035AA6F /* page0VC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5C493D22B087360035AA6F /* page0VC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BF5C494122B087450035AA6F /* page1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5C494022B087450035AA6F /* page1VC.m */; };
 		BF5C494422B087550035AA6F /* page2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5C494322B087550035AA6F /* page2VC.m */; };
@@ -50,6 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF0F008222B133E3008581FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BF0F008422B139E9008581FB /* erweima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = erweima.png; path = ../../../../../../Downloads/erweima.png; sourceTree = "<group>"; };
+		BF0F008A22B14242008581FB /* ScanResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanResultVC.h; sourceTree = "<group>"; };
+		BF0F008B22B14242008581FB /* ScanResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanResultVC.m; sourceTree = "<group>"; };
+		BF0F008D22B147E0008581FB /* erweimakuang-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "erweimakuang-2.png"; path = "../../../../../../Downloads/erweimakuang-2.png"; sourceTree = "<group>"; };
+		BF0F008F22B147FC008581FB /* hengxian2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hengxian2.png; path = ../../../../../../Downloads/hengxian2.png; sourceTree = "<group>"; };
+		BF0F009122B14F75008581FB /* saoyisao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = saoyisao.png; path = ../../../../../../Downloads/saoyisao.png; sourceTree = "<group>"; };
 		BF5C493C22B087360035AA6F /* page0VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = page0VC.h; sourceTree = "<group>"; };
 		BF5C493D22B087360035AA6F /* page0VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = page0VC.m; sourceTree = "<group>"; };
 		BF5C493F22B087450035AA6F /* page1VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = page1VC.h; sourceTree = "<group>"; };
@@ -93,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0F008322B133E3008581FB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,13 +127,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF0F008122B133E2008581FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF0F008222B133E3008581FB /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF0F008622B140D4008581FB /* QRclass */ = {
+			isa = PBXGroup;
+			children = (
+				BF0F008A22B14242008581FB /* ScanResultVC.h */,
+				BF0F008B22B14242008581FB /* ScanResultVC.m */,
+			);
+			path = QRclass;
+			sourceTree = "<group>";
+		};
 		BF5C497922B0D74A0035AA6F /* pic */ = {
 			isa = PBXGroup;
 			children = (
+				BF0F008422B139E9008581FB /* erweima.png */,
 				BF5C498A22B0E0160035AA6F /* xinwen.png */,
 				BF5C498C22B0E09E0035AA6F /* shipin.png */,
 				BF5C498E22B0E0C30035AA6F /* mine.png */,
 				BF5C499022B0EA2F0035AA6F /* head1.jpg */,
+				BF0F008D22B147E0008581FB /* erweimakuang-2.png */,
+				BF0F008F22B147FC008581FB /* hengxian2.png */,
+				BF0F009122B14F75008581FB /* saoyisao.png */,
 			);
 			path = pic;
 			sourceTree = "<group>";
@@ -131,6 +166,7 @@
 				BFF1039422AFABFA00CECA5D /* NewsTests */,
 				BFF1039F22AFABFA00CECA5D /* NewsUITests */,
 				BFF1037A22AFABF800CECA5D /* Products */,
+				BF0F008122B133E2008581FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +229,7 @@
 				BF5C494522B087760035AA6F /* page3VC.h */,
 				BF5C494622B087760035AA6F /* page3VC.m */,
 				BF5C495622B08D4D0035AA6F /* message.xib */,
+				BF0F008622B140D4008581FB /* QRclass */,
 				BF5C494822B0878C0035AA6F /* page4VC.h */,
 				BF5C494922B0878C0035AA6F /* page4VC.m */,
 				BF5C495A22B08D920035AA6F /* QR.xib */,
@@ -310,6 +347,9 @@
 				BF5C495922B08D710035AA6F /* addBook.xib in Resources */,
 				BF5C499122B0EA300035AA6F /* head1.jpg in Resources */,
 				BF5C498B22B0E0160035AA6F /* xinwen.png in Resources */,
+				BF0F009022B147FD008581FB /* hengxian2.png in Resources */,
+				BF0F009222B14F75008581FB /* saoyisao.png in Resources */,
+				BF0F008522B139E9008581FB /* erweima.png in Resources */,
 				BF5C495522B08D230035AA6F /* mine.xib in Resources */,
 				BF5C495B22B08D920035AA6F /* QR.xib in Resources */,
 				BF5C495122B08C040035AA6F /* news.xib in Resources */,
@@ -317,6 +357,7 @@
 				BFF1038922AFABFA00CECA5D /* LaunchScreen.storyboard in Resources */,
 				BFF1038622AFABFA00CECA5D /* Assets.xcassets in Resources */,
 				BF5C498F22B0E0C30035AA6F /* mine.png in Resources */,
+				BF0F008E22B147E0008581FB /* erweimakuang-2.png in Resources */,
 				BF5C495722B08D4D0035AA6F /* message.xib in Resources */,
 				BF5C498D22B0E09F0035AA6F /* shipin.png in Resources */,
 			);
@@ -351,6 +392,7 @@
 				BF5C494722B087760035AA6F /* page3VC.m in Sources */,
 				BF5C494A22B0878C0035AA6F /* page4VC.m in Sources */,
 				BF5C494D22B0879F0035AA6F /* page5VC.m in Sources */,
+				BF0F008C22B14242008581FB /* ScanResultVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

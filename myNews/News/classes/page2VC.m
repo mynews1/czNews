@@ -8,20 +8,22 @@
 
 #import "page2VC.h"
 #import "page3VC.h" //个人信息录入
+#import "page4VC.h" //二维码扫描
 #import "page5VC.h" //我的通讯录
 
 @interface page2VC ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 //**************************设置控件的坐标*********************************
 
+
 //屏幕宽高
 #define screenWidth   self.view.frame.size.width
 #define screenHeight   self.view.frame.size.height
 
 //qq头像宽高
-#define qqY   139
-#define qqW   145
-#define qqX   110
+#define qqY   100
+#define qqW   0.25*screenWidth
+#define qqX   (screenWidth - qqW)/2
 #define qqH   qqW
 
 //************声明头像*********************************
@@ -52,6 +54,9 @@
     
     //添加头像按钮到视图
     [self.view addSubview:_headBtn];
+    
+    //******************二维码扫描button************************
+    
 }
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -78,7 +83,19 @@
     
 }
 
-//通讯里跳转
+//二维码跳转
+- (IBAction)goTopage4VC:(id)sender{
+    page4VC * VCShow = [[page4VC alloc] init];
+    [self.navigationController pushViewController:VCShow animated:YES];
+    //    //Xib的跳转和纯代码的跳转优点区别，挑战时需要在初始化的VC中带上要跳到Xib的名称，如下为跳转方法
+    //    NSLog(@"123");
+    //    testViewController *_vc = [[testViewController alloc]initWithNibName:@"testVC" bundle:[NSBundle mainBundle]];
+    //    [self.navigationController pushViewController:_vc animated:YES];
+    
+    
+}
+
+//通讯录跳转
 - (IBAction)goTopage5VC:(id)sender{
     page5VC * VCShow = [[page5VC alloc] init];
     [self.navigationController pushViewController:VCShow animated:YES];

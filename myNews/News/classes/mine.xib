@@ -42,10 +42,23 @@
                         <action selector="goTopage5VC:" destination="-1" eventType="touchUpInside" id="BcR-Tc-pQe"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibC-gd-ESx">
+                    <rect key="frame" x="333" y="69" width="35" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="saoyisao.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="goTopage4VC:" destination="-1" eventType="touchUpInside" id="pXG-Lv-T36"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="0.2392444349" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="cNY-dj-aKg"/>
             <point key="canvasLocation" x="-20" y="14.842578710644679"/>
         </view>
     </objects>
+    <resources>
+        <image name="saoyisao.png" width="35" height="35"/>
+    </resources>
 </document>

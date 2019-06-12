@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //防止跳转卡顿
     self.view.backgroundColor = [UIColor whiteColor];
 }
 

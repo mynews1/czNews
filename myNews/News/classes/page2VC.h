@@ -14,7 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (IBAction)goTopage3VC:(id)sender;
 
+- (IBAction)goTopage4VC:(id)sender;
+
 - (IBAction)goTopage5VC:(id)sender;
+
 
 @end
 

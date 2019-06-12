@@ -1,5 +1,5 @@
 //
-//  page4VC.h
+//  ScanResultVC.h
 //  News
 //
 //  Created by Kwangchiu on 2019/6/12.
@@ -10,8 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface page4VC : UIViewController
+@interface ScanResultVC : UIViewController
 
+@property (nonatomic,copy)NSString *result;
 
 @end
 
