@@ -23,6 +23,7 @@
 		BF5C498B22B0E0160035AA6F /* xinwen.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5C498A22B0E0160035AA6F /* xinwen.png */; };
 		BF5C498D22B0E09F0035AA6F /* shipin.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5C498C22B0E09E0035AA6F /* shipin.png */; };
 		BF5C498F22B0E0C30035AA6F /* mine.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5C498E22B0E0C30035AA6F /* mine.png */; };
+		BF5C499122B0EA300035AA6F /* head1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF5C499022B0EA2F0035AA6F /* head1.jpg */; };
 		BFF1037E22AFABF800CECA5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF1037D22AFABF800CECA5D /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BFF1038622AFABFA00CECA5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF1038522AFABFA00CECA5D /* Assets.xcassets */; };
 		BFF1038922AFABFA00CECA5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF1038722AFABFA00CECA5D /* LaunchScreen.storyboard */; };
@@ -71,6 +72,7 @@
 		BF5C498A22B0E0160035AA6F /* xinwen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xinwen.png; path = ../../../../../../Downloads/xinwen.png; sourceTree = "<group>"; };
 		BF5C498C22B0E09E0035AA6F /* shipin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shipin.png; path = ../../../../../../Downloads/shipin.png; sourceTree = "<group>"; };
 		BF5C498E22B0E0C30035AA6F /* mine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mine.png; path = ../../../../../../Downloads/mine.png; sourceTree = "<group>"; };
+		BF5C499022B0EA2F0035AA6F /* head1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = head1.jpg; path = ../../../../../Containers/com.tencent.qq/Data/Library/Caches/Images/head1.jpg; sourceTree = "<group>"; };
 		BFF1037922AFABF800CECA5D /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF1037C22AFABF800CECA5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFF1037D22AFABF800CECA5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				BF5C498A22B0E0160035AA6F /* xinwen.png */,
 				BF5C498C22B0E09E0035AA6F /* shipin.png */,
 				BF5C498E22B0E0C30035AA6F /* mine.png */,
+				BF5C499022B0EA2F0035AA6F /* head1.jpg */,
 			);
 			path = pic;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				BF5C496222B0A88C0035AA6F /* Images.xcassets in Resources */,
 				BF5C495922B08D710035AA6F /* addBook.xib in Resources */,
+				BF5C499122B0EA300035AA6F /* head1.jpg in Resources */,
 				BF5C498B22B0E0160035AA6F /* xinwen.png in Resources */,
 				BF5C495522B08D230035AA6F /* mine.xib in Resources */,
 				BF5C495B22B08D920035AA6F /* QR.xib in Resources */,

@@ -10,7 +10,23 @@
 #import "page3VC.h" //个人信息录入
 #import "page5VC.h" //我的通讯录
 
-@interface page2VC ()
+@interface page2VC ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+//**************************设置控件的坐标*********************************
+
+//屏幕宽高
+#define screenWidth   self.view.frame.size.width
+#define screenHeight   self.view.frame.size.height
+
+//qq头像宽高
+#define qqY   139
+#define qqW   145
+#define qqX   110
+#define qqH   qqW
+
+//************声明头像*********************************
+
+@property(nonatomic,strong)UIButton *headBtn ;
 
 @end
 
@@ -19,6 +35,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    //*****************************qq头像******************************
+    
+    //分配初始化qq头像按钮
+    self.headBtn =[[UIButton alloc]initWithFrame:CGRectMake(qqX, qqY, qqW, qqH)];
+    
+    //设置qq头像
+    [_headBtn setBackgroundImage:[UIImage imageNamed:@"head1.jpg" ] forState:UIControlStateNormal];
+    
+    //添加图层蒙版，圆角化
+    _headBtn.layer.cornerRadius=qqH/2;
+    _headBtn.layer.masksToBounds=YES;
+    [_headBtn addTarget:self action:@selector(changHeadAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //添加头像按钮到视图
+    [self.view addSubview:_headBtn];
 }
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
