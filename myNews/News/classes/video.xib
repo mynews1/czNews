@@ -19,9 +19,25 @@
         <view opaque="NO" contentMode="scaleToFill" id="AEi-2p-Rnv">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="0.2392444349" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2F1-3V-Deq">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="S6x-NX-xQt"/>
+                        <outlet property="delegate" destination="-1" id="YNz-Rv-SzK"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2F1-3V-Deq" firstAttribute="leading" secondItem="etY-hJ-5Ns" secondAttribute="leading" id="2eP-BF-5Xr"/>
+                <constraint firstItem="2F1-3V-Deq" firstAttribute="bottom" secondItem="etY-hJ-5Ns" secondAttribute="bottom" id="J59-TX-rV7"/>
+                <constraint firstItem="2F1-3V-Deq" firstAttribute="top" secondItem="AEi-2p-Rnv" secondAttribute="top" constant="64" id="TaR-Xr-PTT"/>
+                <constraint firstItem="2F1-3V-Deq" firstAttribute="trailing" secondItem="etY-hJ-5Ns" secondAttribute="trailing" id="s5x-pA-adz"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="etY-hJ-5Ns"/>
-            <point key="canvasLocation" x="287" y="175"/>
+            <point key="canvasLocation" x="285.60000000000002" y="174.96251874062969"/>
         </view>
     </objects>
 </document>

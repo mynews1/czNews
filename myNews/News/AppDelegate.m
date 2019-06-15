@@ -10,7 +10,7 @@
 #import "page0VC.h"
 #import "page1VC.h"
 #import "page2VC.h"
-#import "page3VC.h"
+#import "page3TVC.h"
 #import "page4VC.h"
 #import "page5VC.h"
 
@@ -51,6 +51,8 @@
     UITabBarController * main = [[UITabBarController alloc] init];
     main.viewControllers = @[page0NC,page1NC,page2NC];
     self.window.rootViewController = main;
+    
+    
     
     return YES;
     
