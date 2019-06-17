@@ -21,14 +21,19 @@
 #define screenHeight   self.view.frame.size.height
 
 //qq头像宽高
-#define qqY   100
+#define qqY   screenHeight*0.2
 #define qqW   0.25*screenWidth
-#define qqX   (screenWidth - qqW)/2
+#define qqX   screenWidth*0.4
 #define qqH   qqW
+
+
 
 //************声明头像*********************************
 
 @property(nonatomic,strong)UIButton *headBtn ;
+
+//************二维码***********************************
+@property(nonatomic,strong)UIButton *QRBtn ;
 
 @end
 
@@ -50,12 +55,13 @@
     //添加图层蒙版，圆角化
     _headBtn.layer.cornerRadius=qqH/2;
     _headBtn.layer.masksToBounds=YES;
-    [_headBtn addTarget:self action:@selector(changHeadAction:) forControlEvents:UIControlEventTouchUpInside];
+    //[_headBtn addTarget:self action:@selector(changHeadAction:) forControlEvents:UIControlEventTouchUpInside];
     
     //添加头像按钮到视图
     [self.view addSubview:_headBtn];
     
     //******************二维码扫描button************************
+    
     
 }
 

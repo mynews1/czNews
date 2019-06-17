@@ -12,7 +12,7 @@
 
 @end
 
-NSArray *_Array,*_ArrayMp4Url;
+NSArray *_Array,*_ArrayMp4Url,*_ArrayImg;
 
 @implementation page0VC
 
@@ -41,28 +41,19 @@ NSArray *_Array,*_ArrayMp4Url;
                                     
                                     
                                     
-                                    //视频地址数组
-                                   /* NSMutableArray *urlAdd = [[NSMutableArray alloc] init];
-                                    for (int i = 0; i < value.count; i ++) {
-                                        NSString *str1 = [value[i] valueForKey:@"mp4_url"];
-                                        //UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-                                        //[self.view addSubview:str1];
-                                        [urlAdd addObject:str1];
-                                        // NSLog(@"视频地址是：%@",urlAdd[i]);
-                                    }
-                                    */
                                     
-                                    
-                                    //
                                     _Array=[[NSMutableArray alloc] init];
-                                    _ArrayMp4Url=[[NSMutableArray alloc] init];//我们使用多个数组来存放视屏地址和i标题，不要
+                                    _ArrayMp4Url=[[NSMutableArray alloc] init];
+                                    _ArrayImg=[[NSMutableArray alloc] init];//我们使用多个数组来存放视屏地址和标题以及图片
                                     //NSMutableArray *titleAdd = [[NSMutableArray alloc] init];
 
                                     for (int i = 0; i < value.count; i ++) {
                                         NSString *str2 = [value[i] valueForKey:@"title"];
                                         NSString *mp4url = [value[i] valueForKey:@"mp4_url"];
+                                        NSString *img = [value[i] valueForKey:@"cover"];
                                         [_Array addObject:str2];
                                         [_ArrayMp4Url addObject:mp4url];
+                                        [_ArrayImg addObject:img];
                                        // [titleAdd addObject:str2];
                                         // NSLog(@"打印标题");
                                         // [self->_Array addObject:[Province provinceWithCities:@" ":@[[value[i] objectForKey:@"title"]]]];
@@ -81,6 +72,7 @@ NSArray *_Array,*_ArrayMp4Url;
                                 NSLog(@"%@",connectionError);
                             }];
 }
+
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

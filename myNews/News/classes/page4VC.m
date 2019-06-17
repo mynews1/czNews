@@ -24,6 +24,7 @@
     AVCaptureSession * session;//输入输出的中间桥梁
     int line_tag;
     UIView *highlightView;
+    UIButton *backBtn;//返回button
 }
 @end
 
@@ -152,6 +153,18 @@
         ScanResultVC *resultVC = [[ScanResultVC alloc] init];
         resultVC.title = @"扫描结果";
         resultVC.result = data;
+        //底部view
+        UIImageView * downView = [[UIImageView alloc] initWithFrame:CGRectMake(30, (self.view.center.y+(ScreenWidth-60)/2), (ScreenWidth-60), (ScreenHeight-(self.view.center.y-(ScreenWidth-60)/2)))];
+        downView.alpha = 0.5;
+        downView.backgroundColor = [UIColor blackColor];
+        [self.view addSubview:downView];
+        
+        UIButton *cancleBtn = [[UIButton alloc] initWithFrame:CGRectMake(30, CGRectGetMinY(downView.frame), ScreenWidth-60, 60)];
+        [cancleBtn setTitle:@"返回" forState:UIControlStateNormal];
+        // [cancleBtn setImage:[UIImage imageNamed:@"fanhui.png"] forState:UIControlStateNormal];
+        [cancleBtn addTarget:self action:@selector(cancleBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:cancleBtn];
+        
         [self.navigationController pushViewController:resultVC animated:YES];
         
     }
@@ -185,7 +198,8 @@
     [self.view addSubview:upView];
     
     UIButton *cancleBtn = [[UIButton alloc] initWithFrame:CGRectMake(5, 20, 44, 44)];
-    [cancleBtn setImage:[UIImage imageNamed:@"nav_backButton_image"] forState:UIControlStateNormal];
+    [cancleBtn setTitle:@"返回" forState:UIControlStateNormal];
+   // [cancleBtn setImage:[UIImage imageNamed:@"fanhui.png"] forState:UIControlStateNormal];
     [cancleBtn addTarget:self action:@selector(cancleBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancleBtn];
     
@@ -220,13 +234,6 @@
     msg.text = @"将二维码放入框内,即可自动扫描";
     [self.view addSubview:msg];
     
-    //    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, ScreenHeight-100, ScreenWidth, 100)];
-    //    label.backgroundColor = [UIColor clearColor];
-    //    label.textColor = [UIColor whiteColor];
-    //    label.textAlignment = NSTextAlignmentCenter;
-    //    label.font = [UIFont systemFontOfSize:15];
-    //    label.text = @"";
-    //    [self.view addSubview:label];
     
     
     
