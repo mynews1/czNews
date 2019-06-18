@@ -39,7 +39,7 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="goTopage5VC:" destination="-1" eventType="touchUpInside" id="BcR-Tc-pQe"/>
+                        <action selector="sl_getAddressBookAction:" destination="-1" eventType="touchUpInside" id="40P-0S-EZw"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibC-gd-ESx">

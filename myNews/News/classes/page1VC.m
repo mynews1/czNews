@@ -124,13 +124,7 @@ struct CellData {
    
     [_win addSubview:_playerView.view];
     [_win addSubview:_btn_close];
-//    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width-50,20, 30, 30)];
-//
-//    view.backgroundColor = [UIColor whiteColor];
-//
-//    view.layer.masksToBounds =YES;
-//
-//    view.layer.cornerRadius =15;
+
     
     //获取当前UIWindow 并添加一个视图
    
@@ -139,29 +133,7 @@ struct CellData {
     
     
     
-    //[self addChildViewController:_playerView];
-    //[self.view addSubview:_playerView.view];
-    
-//    //3 再把AVPlayer放到 AVPlayerLayer上
-//    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player]; [self.view.layer addSublayer:playerLayer];
-//    playerLayer.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.width);
-   
-//    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
-//
-//    playerLayer.masksToBounds= YES;
-//
-//    //playerLayer.borderColor = [UIColor redColor].CGColor;
-//
-//    playerLayer.borderWidth = 5.0f;
-//
-//    playerLayer.cornerRadius = 20.0f;
-//
-////    playerLayer.frame = self.clipView.bounds;
-////
-////    [self.clipView.layer addSublayer:playerLayer];
-//    _playerLayer.frame = CGRectMake(0, 0, 350, 300);
-//    [self.view.layer addSublayer:_playerLayer];
-//
+
     [_player play];
 
 }
@@ -230,7 +202,7 @@ struct CellData {
     NSData *imgdata=[NSData dataWithContentsOfURL:url];
     //UIImage *image =[UIImage imageWithData: imgdata];
     //图片加载完毕，开始填充
-     UIImageView *userCellView=[[UIImageView alloc]init];
+    UIImageView *userCellView=[[UIImageView alloc]init];
     //UIImageView *userCellView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width-40, 210)];
     // CGFloat imageHeight = image.size.height * SCREEN_WIDTH/image.size.width;
     userCellView.image=[UIImage imageWithData:imgdata];

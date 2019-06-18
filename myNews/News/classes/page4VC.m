@@ -53,6 +53,8 @@
     [super viewDidLoad];
     [self instanceDevice];
     
+     UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+    
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
@@ -153,19 +155,10 @@
         ScanResultVC *resultVC = [[ScanResultVC alloc] init];
         resultVC.title = @"扫描结果";
         resultVC.result = data;
-        //底部view
-        UIImageView * downView = [[UIImageView alloc] initWithFrame:CGRectMake(30, (self.view.center.y+(ScreenWidth-60)/2), (ScreenWidth-60), (ScreenHeight-(self.view.center.y-(ScreenWidth-60)/2)))];
-        downView.alpha = 0.5;
-        downView.backgroundColor = [UIColor blackColor];
-        [self.view addSubview:downView];
         
-        UIButton *cancleBtn = [[UIButton alloc] initWithFrame:CGRectMake(30, CGRectGetMinY(downView.frame), ScreenWidth-60, 60)];
-        [cancleBtn setTitle:@"返回" forState:UIControlStateNormal];
-        // [cancleBtn setImage:[UIImage imageNamed:@"fanhui.png"] forState:UIControlStateNormal];
-        [cancleBtn addTarget:self action:@selector(cancleBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:cancleBtn];
+       
         
-        [self.navigationController pushViewController:resultVC animated:YES];
+       [self.navigationController pushViewController:resultVC animated:YES];
         
     }
 }

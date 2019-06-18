@@ -6,12 +6,12 @@
 //  Copyright © 2019年 Kwangchiu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface page5VC : UIViewController
-
-@end
-
-NS_ASSUME_NONNULL_END
+//#import <UIKit/UIKit.h>
+//
+//NS_ASSUME_NONNULL_BEGIN
+//
+//@interface page5VC : UIViewController
+//
+//@end
+//
+//NS_ASSUME_NONNULL_END

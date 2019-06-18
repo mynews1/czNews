@@ -9,11 +9,10 @@
 #import "page2VC.h"
 #import "page3TVC.h" //个人信息录入
 #import "page4VC.h" //二维码扫描
-#import "page5VC.h" //我的通讯录
-//#import <ContactsUI/ContactsUI.h>
+#import "SLAddressBookHelp.h"//我的通讯录
+//#import "page5VC.h"
 
 @interface page2VC ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
-
 
 //**************************设置控件的坐标*********************************
 
@@ -38,13 +37,6 @@
 @property(nonatomic,strong)UIButton *QRBtn ;
 
 @end
-
-//@interface page2VC ()<CNContactPickerDelegate>
-//{
-//    UIButton * btn;
-//
-//}
-//@end
 
 @implementation page2VC
 
@@ -71,13 +63,7 @@
     
     //******************二维码扫描button************************
     
-//    btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [btn setTitle:@"读取通讯录" forState:UIControlStateNormal];
-//    btn.frame = CGRectMake(0, 100, 800, 100);
-//    btn.backgroundColor = [UIColor brownColor];
-//    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    [btn addTarget:self action:@selector(pressBtn) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:btn];
+    
 }
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -116,74 +102,36 @@
     
 }
 
-//通讯录跳转
-- (IBAction)goTopage5VC:(id)sender{
-    page5VC * VCShow = [[page5VC alloc] init];
-    [self.navigationController pushViewController:VCShow animated:YES];
-    //    //Xib的跳转和纯代码的跳转优点区别，挑战时需要在初始化的VC中带上要跳到Xib的名称，如下为跳转方法
-    //    NSLog(@"123");
-    //    testViewController *_vc = [[testViewController alloc]initWithNibName:@"testVC" bundle:[NSBundle mainBundle]];
-    //    [self.navigationController pushViewController:_vc animated:YES];
-
-
+////通讯录跳转
+//- (IBAction)goTopage5VC:(id)sender{
+//    page5VC * VCShow = [[page5VC alloc] init];
+//    [self.navigationController pushViewController:VCShow animated:YES];
+//    //    //Xib的跳转和纯代码的跳转优点区别，挑战时需要在初始化的VC中带上要跳到Xib的名称，如下为跳转方法
+//    //    NSLog(@"123");
+//    //    testViewController *_vc = [[testViewController alloc]initWithNibName:@"testVC" bundle:[NSBundle mainBundle]];
+//    //    [self.navigationController pushViewController:_vc animated:YES];
+//
+//
+//}
+- (IBAction)sl_getAddressBookAction:(id)sender {
+    
+    
+    [[SLAddressBookHelp sharedInstance] sl_getUserContacts:self addressBookModels:^(NSArray *addressBookModels) {
+        
+    }];
+    
+    [[SLAddressBookHelp sharedInstance] sl_getAddressNameWithController:self addressName:^(NSString *name, NSString *phone) {
+        NSLog(@"name:   %@  phone:  %@", name, phone);
+    } show:NO];
+    
 }
 
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
-//- (void)cancleBtnClick
-//{
-//    [self.navigationController popViewControllerAnimated:YES];
-//}
-//-(void)pressBtn{
-//    
-//    //让用户给权限,没有的话会被拒绝
-//    CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
-//    if (status == CNAuthorizationStatusNotDetermined) {
-//        CNContactStore *store = [[CNContactStore alloc] init];
-//        [store requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
-//            if (error) {
-//                NSLog(@"weishouquan ");
-//            }else
-//            {
-//                NSLog(@"chenggong ");//用户给权限了
-//                CNContactPickerViewController * picker = [CNContactPickerViewController new];
-//                picker.delegate = self;
-//                picker.displayedPropertyKeys = @[CNContactPhoneNumbersKey];//只显示手机号
-//                [self presentViewController: picker  animated:YES completion:nil];
-//            }
-//        }];
-//    }
-//    
-//    if (status == CNAuthorizationStatusAuthorized) {//有权限时
-//        CNContactPickerViewController * picker = [CNContactPickerViewController new];
-//        picker.delegate = self;
-//        picker.displayedPropertyKeys = @[CNContactPhoneNumbersKey];
-//        [self presentViewController: picker  animated:YES completion:nil];
-//    }
-//    else{
-//        NSLog(@"您未开启通讯录权限,请前往设置中心开启");
-//    }
-//}
-//
-//
-//
-//-(void)contactPicker:(CNContactPickerViewController *)picker didSelectContact:(CNContact *)contact{
-//    
-//    CNPhoneNumber * num = nil;
-//    NSString * string = nil;
-//    if (contact.phoneNumbers.count >0) {
-//        num = contact.phoneNumbers[0].value;
-//        string = [NSString stringWithFormat:@"%@%@   %@",contact.familyName,contact.givenName,[num valueForKey:@"digits"]];
-//    }else{
-//        string = [NSString stringWithFormat:@"%@%@",contact.familyName,contact.givenName];
-//        
-//    }
-//    
-//    NSLog(@"%@",string);
-//    
-//    [btn setTitle:string forState:UIControlStateNormal];
-//    
-//}
 /*
 #pragma mark - Navigation
 
