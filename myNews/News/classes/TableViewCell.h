@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@protocol myTabVdelegate<NSObject>
+
+-(void)myTabVClick:(UITableViewCell *)cell;
+@end
 
 @interface TableViewCell : UITableViewCell
 
+@property(strong,nonatomic)UIButton *btn;
+@property(assign,nonatomic)id<myTabVdelegate>delegate;
 @end
 
-NS_ASSUME_NONNULL_END
+
+
