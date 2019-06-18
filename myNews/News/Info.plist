@@ -13,6 +13,8 @@
 	<string></string>
 	<key>NSCameraUsageDescription</key>
 	<string>打开相机权限</string>
+	<key>NSContactsUsageDescription</key>
+	<string>读取通讯录权限</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

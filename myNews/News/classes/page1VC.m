@@ -230,7 +230,7 @@ struct CellData {
     NSData *imgdata=[NSData dataWithContentsOfURL:url];
     //UIImage *image =[UIImage imageWithData: imgdata];
     //图片加载完毕，开始填充
-    UIImageView *userCellView=[[UIImageView alloc]init];
+     UIImageView *userCellView=[[UIImageView alloc]init];
     //UIImageView *userCellView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width-40, 210)];
     // CGFloat imageHeight = image.size.height * SCREEN_WIDTH/image.size.width;
     userCellView.image=[UIImage imageWithData:imgdata];
