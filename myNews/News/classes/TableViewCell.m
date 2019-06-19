@@ -160,9 +160,9 @@ NSMutableArray *array;
         [self addSubview:text2];
         [self addSubview:text3];
         _btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn.frame =CGRectMake(300,10, 100,30);
+        _btn.frame =CGRectMake(300,450, 100,30);
         [_btn setTitle:@"test"forState:UIControlStateNormal];
-        [_btn setBackgroundColor:[UIColor blueColor]];
+        [_btn setBackgroundColor:[UIColor orangeColor]];
         [_btn addTarget:self action:@selector
         (test:)forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_btn];
@@ -186,6 +186,8 @@ NSMutableArray *array;
     NSLog(@"textfield text %@",textField.text);
     
 }
+
+
 
 //- (void)awakeFromNib {
 //    [super awakeFromNib];

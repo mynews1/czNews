@@ -9,6 +9,7 @@
 #import "page3TVC.h"
 #import "TableViewCell.h"
 #import "page3VC.h"
+#import "page2VC.h"
 #import "WRCellView/WRCellView.h"
 
 
@@ -144,12 +145,53 @@ extern WRCellView*   nameView;
     
    nameView.rightLabel.text =[dic objectForKey:@"name"];
     
+    [self buildLeftItem];
+    
+//    page2VC *back = [self.storyboard instantiateViewControllerWithIdentifier:@"page2VC"];
+//    // 进行跳转
+//    [self presentViewController:back animated:YES completion:nil];
+
+    
+    
+    
 }
+
+- (void)buildLeftItem
+{
+    //UIBarButtonItem *leftItem = [UIBarButtonItem  target:self action:@selector(back)];
+    //    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithTitle:@"返回我的" style:UIBarButtonItemStyleDone target:self action:@selector(back:)];
+    //    self.navigationItem.hidesBackButton = YES;
+    //    self.navigationItem.backBarButtonItem = leftItem;
+    UIImage* backImage = [UIImage imageNamed:@"fanhui.png"];
+    
+    CGRect backframe = CGRectMake(0,0,54,30);
+    
+    UIButton* backButton= [[UIButton alloc] initWithFrame:backframe];
+    
+    [backButton setBackgroundImage:backImage forState:UIControlStateNormal];
+    
+    // [backButton setTitle:@"返回我的" forState:UIControlStateNormal];
+    //backButton.backgroundColor=[UIColor blackColor];
+    backButton.titleLabel.font=[UIFont systemFontOfSize:13];
+    [backButton addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.hidesBackButton = YES;
+    //UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] init];
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+    
+}
+
+- (void)back:(UIButton *)btn
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 //设置单元格的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPat
 {
     //这里设置成150
-    return 1000;
+    return 950;
 }
 
 

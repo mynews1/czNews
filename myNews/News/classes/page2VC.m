@@ -10,6 +10,7 @@
 #import "page3TVC.h" //个人信息录入
 #import "page4VC.h" //二维码扫描
 #import "SLAddressBookHelp.h"//我的通讯录
+#import "page3VC.h"
 //#import "page5VC.h"
 
 @interface page2VC ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
@@ -80,7 +81,7 @@
 
 //个人信息跳转
 - (IBAction)goTopage3VC:(id)sender{
-    page3TVC * VCShow = [[page3TVC alloc] init];
+    page3VC * VCShow = [[page3VC alloc] init];
     [self.navigationController pushViewController:VCShow animated:YES];
     //    //Xib的跳转和纯代码的跳转优点区别，挑战时需要在初始化的VC中带上要跳到Xib的名称，如下为跳转方法
     //    NSLog(@"123");

@@ -34,7 +34,7 @@
 //    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithTitle:@"返回我的" style:UIBarButtonItemStyleDone target:self action:@selector(back:)];
 //    self.navigationItem.hidesBackButton = YES;
 //    self.navigationItem.backBarButtonItem = leftItem;
-    UIImage* backImage = [UIImage imageNamed:@"close.png"];
+    UIImage* backImage = [UIImage imageNamed:@"fanhui.png"];
     
     CGRect backframe = CGRectMake(0,0,54,30);
     
